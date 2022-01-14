@@ -1,0 +1,73 @@
+#app {
+    overflow: hidden;
+    position: relative;
+    svg{
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    >*:not(#wave){
+        position: relative;
+        z-index: 2;
+    }
+    #wave{
+        z-index: 0;
+        max-height: 100vh;
+    }
+}
+.home{
+    form{
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 25px 50px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 15px 35px rgb(50 50 93 / 10%), 0 5px 15px rgb(0 0 0 / 7%);
+        margin-bottom: 80px;
+        margin-top: 30px;
+        legend{
+            text-align: left;
+            margin-top: 12px;
+            padding-bottom: 2px;
+        }
+        button{
+            margin-top: 20px;
+            width: 200px;
+        }
+    }
+    .top-side{
+        display: flex;
+        justify-content: space-between;
+        #picture-input{
+            width: 200px;
+            margin: 0px;
+            .preview-container{
+                margin-left: 0px;
+            }
+            button{
+                margin-left: 0px;
+                float: left;
+                margin-top: 5px;
+            }
+        }
+        .insides{
+            width: calc(100% - 200px);
+        }
+    }
+}
+#app footer{
+    margin-top: 60px;
+    background: #668eff;
+    color: #FFF;
+    padding: 10px 10px 6px 10px;
+    position: fixed !important;
+    bottom: 0;
+    right: 0;
+    border-radius: 60px 0px 0px 0px;
+    width: 190px;
+    font-size: 11px;
+    line-height: 1.2em;
+    text-align: right;
+}
