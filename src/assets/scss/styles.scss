@@ -1,7 +1,7 @@
 #app {
     overflow: hidden;
     position: relative;
-    svg{
+    #wave > svg,  #wave > i{
         display: inline-block;
         position: absolute;
         top: 0;
@@ -16,25 +16,201 @@
         max-height: 100vh;
     }
 }
+.steps-bar{
+    max-width: 600px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    span{
+        font-size: 23px !important;
+    }
+    svg,i{
+        font-size: 20px !important;
+    }
+    .step-progress__step:after{
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .step-progress__step-label{
+        color: #2ae1a7;
+    }
+    .step-progress__wrapper-after, .step-progress__wrapper-before{
+        height: 6px !important;
+    }
+}
+.simulatebuttons{
+    margin: auto;
+    margin-bottom: 80px;
+    padding: 6px 25px 6px 30px;
+    cursor: pointer;
+    border: 1px solid #668eff;
+    background-color: #668eff;
+    color: #FFF;
+    font-weight: 700;
+    border-radius: 30px;
+    transition: 350ms all ease;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    i,svg{
+        margin: 0px 0px 0px 8px;
+    }
+}
+.home .inputs-list .nav-buttons{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+    width: 100%;
+    margin-bottom: 5px;
+    .simulatebuttons{
+        margin: 0px;
+    }
+    .remove,.add{
+        cursor: pointer;
+        i,svg{
+            font-size: 22px;
+            margin-left: 20px;
+            transition: 350ms all ease;
+        }
+    }
+    .add:hover{
+        i,svg{
+            color: #0fe1a7;
+        }
+    }
+    .remove:hover{
+        i,svg{
+            color: #e1160f;
+        }
+    }
+}
+.simulatebuttons:hover{
+    color: white;
+    background-color: #0fe1a7;
+    border: 1px solid #0fe1a7;
+}
+.slide-enter-active, .slide-leave-active {
+    transition: opacity .4s ease-in-out, transform .4s ease-in-out;
+}
+
+.slide-enter, .slide-leave-to {
+    opacity: 0;
+    transform: translateX(-60px);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    a{
+        i,svg{
+
+            transition: 350ms all ease;
+            font-size: 27px;
+            color: #FFF;
+            margin: 10px;
+        }
+    }
+    a:hover{
+        i,svg{
+            color: #2ae1a7;
+        }
+    }
+    .home-header{
+        border-radius: 0px 0px 75px 0px;
+        padding-right: 16px;
+        padding-bottom: 13px;
+    }
+    .help-header{
+        border-radius: 0px 0px 0px 75px;
+        padding-left: 16px;
+        padding-bottom: 13px;
+    }
+}
 .home{
     form{
-        max-width: 900px;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 25px 50px;
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 15px 35px rgb(50 50 93 / 10%), 0 5px 15px rgb(0 0 0 / 7%);
-        margin-bottom: 80px;
-        margin-top: 30px;
-        legend{
-            text-align: left;
-            margin-top: 12px;
-            padding-bottom: 2px;
+        .group-inputs{
+            h2{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 20px;
+                overflow-anchor: none;
+                background: #f1f1f1;
+                padding: 15px 25px;
+                border-radius: 7px;
+                cursor: pointer;
+                i,svg{
+                    font-size: 22px;
+                    margin-right: 6px;
+                }
+            }
+        }
+        #step-one, #step-two, #step-three{
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 25px 50px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 15px 35px rgb(50 50 93 / 10%), 0 5px 15px rgb(0 0 0 / 7%);
+            margin-bottom: 80px;
+            margin-top: 30px;
+            legend,label{
+                text-align: left;
+                margin-top: 12px;
+                padding-bottom: 2px;
+            }
+        }
+        .form-group label{
+            margin-left: 0px;
+            width: 100%;
+        }
+        .infobutton{
+            margin-left: 0px;
+            margin-top: 5px;
         }
         button{
-            margin-top: 20px;
-            width: 200px;
+            margin: auto;
+            margin-bottom: 80px;
+            padding: 6px 25px 6px 30px;
+            cursor: pointer;
+            border: 1px solid #668eff;
+            background-color: #668eff;
+            color: #FFF;
+            font-weight: 700;
+            border-radius: 30px;
+            transition: 350ms all ease;
+            margin-left: 20px;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            i,svg{
+                margin: 0px 0px 0px 8px;
+            }
+        }
+        .nav-buttons{
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+        }
+        #prev{
+            padding: 6px 30px 6px 25px;
+            i,svg{
+                margin: 0px 8px 0px 0px;
+            }
+        }
+        button:hover{
+            color: white;
+            background-color: #0fe1a7;
+            border: 1px solid #0fe1a7;
+        }
+        .split-inputs{
+            display: flex;
+            justify-content: space-between;
+            >*{
+                width: calc(50% - 4px);
+            }
         }
     }
     .top-side{
@@ -70,4 +246,82 @@
     font-size: 11px;
     line-height: 1.2em;
     text-align: right;
+}
+.popup-layer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    >div{
+        max-width: 620px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+    button{
+        margin: 0px auto;
+        margin-bottom: 80px;
+        padding: 6px 25px 6px 30px;
+        cursor: pointer;
+        border: 1px solid #668eff;
+        background-color: #668eff;
+        color: #FFF;
+        font-weight: 700;
+        border-radius: 30px;
+        transition: 350ms all ease;
+        margin-left: 20px;
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        i,svg{
+            margin: 0px 0px 0px 8px;
+        }
+    }
+    button:hover{
+        color: white;
+        background-color: #0fe1a7;
+        border: 1px solid #0fe1a7;
+    }
+}
+#step-three{
+    .vue-html2pdf{
+        display: flex;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 99;
+        .layout-container{
+            position: relative;
+            left: 0;
+            top: 0;
+            z-index: 99;
+        }
+    }
+}
+.nav-buttons.next-prev{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    button{
+        margin-bottom: 10px;
+        margin-top: 10px;
+        box-shadow: 0 15px 35px rgb(50 50 93 / 10%), 0 5px 15px rgb(0 0 0 / 7%);
+    }
+}
+#pdf-content{
+    background-color: #FFF;
+}
+.downloadpdf{
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 10px !important;
+    margin-bottom: 20px !important;
+    background-color: #0fe1a7 !important;
+    border: 1px solid #0fe1a7 !important;
+}
+.downloadpdf:hover{
+    background-color: #04805d !important;
+    border: 1px solid #04805d !important;
 }

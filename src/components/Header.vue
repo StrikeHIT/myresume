@@ -1,10 +1,11 @@
 <template>
     <nav class="header">
-        <div id="nav">
-            <router-link variant="success" to="/">Home</router-link>
-            |
-            <router-link to="/about">Ajuda</router-link>
-        </div>
+        <router-link class="home-header" variant="success" to="/">
+            <i class="fas fa-home"></i>
+        </router-link>
+        <router-link class="help-header" to="/about">
+            <i class="fas fa-question"></i>
+        </router-link>
     </nav>
 </template>
 <script>
