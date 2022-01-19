@@ -5,6 +5,7 @@ import store from './store'
 import VueMask from 'v-mask'
 import PopupLayer from 'vue-popup-layer'
 import VueCloneya from 'vue-cloneya'
+import VueMeta from 'vue-meta'
 
 Vue.config.productionTip = false
 
@@ -13,6 +14,7 @@ Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
 Vue.use(PopupLayer)
 Vue.use(VueCloneya)
+Vue.use(VueMeta)
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -29,6 +31,12 @@ new Vue({
   router,
   store,
   el: '#app',
+  metaInfo: {
+    charset: 'utf-8' ,
+    title: 'Meu Currículo Grátis',
+    name: 'viewport', content: 'width=device-width, initial-scale=1',
+    titleTemplate: '%s | Simples e Rápido'
+  },
   data: {
     show: true
   },
