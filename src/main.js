@@ -6,6 +6,7 @@ import VueMask from 'v-mask'
 import PopupLayer from 'vue-popup-layer'
 import VueCloneya from 'vue-cloneya'
 import VueMeta from 'vue-meta'
+import VueRouter from 'vue-router'
 
 Vue.config.productionTip = false
 
@@ -15,6 +16,7 @@ Vue.use(BootstrapVueIcons)
 Vue.use(PopupLayer)
 Vue.use(VueCloneya)
 Vue.use(VueMeta)
+Vue.use(VueRouter)
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'

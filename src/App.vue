@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <Header/>
-    <router-view/>
+    <Home/>
+    <!-- <router-view/> -->
     <Footer/>
     <div id="wave">
       <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
@@ -15,12 +16,14 @@
 // @ is an alias to /src
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
+import Home from '@/views/Home.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    Footer
+    Footer,
+    Home
   }
 }
 </script>
@@ -36,6 +39,7 @@ export default {
 
 #nav {
   padding: 30px;
+
   a {
     font-weight: bold;
     color: #2c3e50;

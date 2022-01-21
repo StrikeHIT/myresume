@@ -132,7 +132,7 @@
                   <div class="split-inputs">
                     <div class="form-group">
                       <label>Grau</label>
-                      <input type="text" class="form-control" placeholder="ex: Licenciatura" v-cloneya-input="'name'">
+                      <input type="text" class="form-control" placeholder="ex: Ensino médio ou nome do curso de ensino superior" v-cloneya-input="'name'">
                     </div>
                     <div class="form-group">
                       <label>Cidade ou localidade:</label>
@@ -172,7 +172,7 @@
                 <div class="inputs-list">
                   <div class="form-group">
                     <label>Hobby</label>
-                    <input type="text" class="form-control" placeholder="ex: Licenciatura" v-cloneya-input="'name'">
+                    <input type="text" class="form-control" placeholder="ex: Ler livros" v-cloneya-input="'name'">
                   </div>
                   <div class="nav-buttons">
                     <div class="remove" v-cloneya-remove tabindex="-1"><i class="fas fa-trash-alt"></i></div> 
@@ -251,7 +251,7 @@
             <section id="pdf-content" slot="pdf-content" style="display:flex;font-family: 'Poppins', sans-serif;">
               <div class="left-side" style="width: 250px;text-align: left;margin-right: 20px;border-right:1px solid #cbcbcb;">
                 <h2 style="max-width:calc(100% - 30px);margin-left: auto;margin-right: auto;font-size: 16px;font-weight: bold;margin-top: 30px;text-align: center;">{{form.name}}</h2>
-                <div style="margin-left:auto;margin-right:auto;width: 180px;border-radius: 100%;overflow: hidden;height: 180px;display: flex;align-items: flex-start;justify-content: center;border: 3px solid #cbcbcb;margin-top: 10px;">
+                <div v-if="image"  style="margin-left:auto;margin-right:auto;width: 180px;border-radius: 100%;overflow: hidden;height: 180px;display: flex;align-items: flex-start;justify-content: center;border: 3px solid #cbcbcb;margin-top: 10px;">
                   <img v-if="image" style="width: 180px;" :src="image">
                 </div>
                 <div class="list-personal-details" style="width: calc(100% - 30px);margin-left: auto;margin-right: auto;margin-top: 20px;">
@@ -407,6 +407,7 @@ import moment from 'moment';
 
 export default {
   name: 'Home',
+   path: '/',
     data() {
       return {
         image: '',

@@ -23,7 +23,7 @@
     "vue-meta": "^2.4.0",
     "vue-picture-input": "^2.1.6",
     "vue-popup-layer": "^0.0.17",
-    "vue-router": "^3.2.0",
+    "vue-router": "^3.5.3",
     "vue-step-progress": "^0.3.7",
     "vue-the-mask": "^0.11.1",
     "vuex": "^3.4.0",
