@@ -1,3 +1,4 @@
+<!-- OS BLOCOS SERÃO SEPARADOS EM COMPONENTES FUTURAMENTE -->
 <template>
   <div class="home">
     <div class="steps-bar">
